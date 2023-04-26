@@ -7,6 +7,7 @@ BLACK = (0, 0, 0)
 
 
 def main():
+    
     pygame.init()
     clock = pygame.time.Clock()
     user_input = int(input("What screen proprotions do you want? "))
@@ -16,19 +17,14 @@ def main():
     screen.fill(WHITE)
     emoji = load_picture(emoji_choice)
     draw_picture(screen,emoji)
-    # TODO: Ask for the size of screen.
-    # TODO: Using the template of Project 2, create the name, title and background color of the screen.
+    
 
     # The font type and size is defined as:
     font = pygame.font.SysFont("comicsans", 20)
     text = font.render("Click anywhere to quit.", True, BLACK)
     screen.blit(text, (user_input//3, 25))
-    # TODO: The text will appear at the top center of the screen.
-
-    # TODO: Ask for the name of file.
-
-    # TODO: Call the load_picture function with its input as the name of file. This function returns the Image object.
-    # TODO: Call the draw_picture function with its input as screen and Image object.
+   
+  
     run = True
     while run:
         # The program waits for the events (mouse click, etc.):
@@ -50,7 +46,7 @@ def main():
 def load_picture(emoji_file):
     emojis = pygame.image.load(emoji_file)
     return emojis
-   # emoji_file = pygame.image.load('Downloads/Images3/smiley.png'), (150, 150)
+  
 
 
 
